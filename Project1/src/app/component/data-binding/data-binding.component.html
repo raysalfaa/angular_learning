@@ -1,0 +1,56 @@
+<p>data-binding works!</p>
+
+<div>
+    One way data binding from .ts to .html
+</div>
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4 bg-success">
+                <h6>{{courseName}}</h6>
+            </div>
+            <div class="col-4 bg-warning">
+                {{inputType}}
+            </div>
+            <div>
+                <input type="{{inputType}}" value="{{courseName}}" placeHolder="Enter course name">
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    One way data binding from .ts to .html
+</div>
+<div class="row">
+    <div class="col-4">
+        <div class="row">
+            <div class="col-4 bg-success">
+                <h6>{{courseName}}</h6>
+            </div>
+            <div class="col-4 bg-warning">
+                {{inputType}}
+            </div>
+            <div>
+                <input type="text" [value]="courseName" placeHolder="Enter course name">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-4">
+        <button class="btn btn-success" (click)="showAlert('Welcome to new journey')">Welcome back</button>
+        <span (click)="showAlert('This is from span')">Click here</span>
+        <button class="btn btn-success" (click)="changeCourseName()">Change course</button>
+        </div>
+    <div class="col-6">
+        <input type="text" [(ngModel)]="courseName" placeHolder="Enter course name"/>   
+        <select [(ngModel)]="stateName">
+            <option value="">Select</option>
+            <option value="Karnatka">Karnatka</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Maharasta">Maharasta</option>
+
+        </select>
+        <h2>{{firstName()}}</h2>
+    </div>
+</div>
