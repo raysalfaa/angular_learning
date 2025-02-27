@@ -4,10 +4,11 @@ import { AddEmployeeComponent } from './component/add-employee/add-employee.comp
 import { NewEmployeeComponent } from './component/new-employee/new-employee.component';
 import { DataBindingComponent } from './component/data-binding/data-binding.component';
 import { StructuralComponent } from './component/directive/structural/structural.component';
+import { AttributeComponent } from './component/directive/attribute/attribute.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,StructuralComponent],
+  imports: [RouterOutlet,AttributeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
