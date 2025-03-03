@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-structural',
@@ -9,6 +10,10 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './structural.component.css'
 })
 export class StructuralComponent {
+  constructor(private route:Router) { }
+    backToAddEmp() {
+      this.route.navigateByUrl('/add-emp');
+    }
   isVisible:boolean=true;
 
   showText1(){

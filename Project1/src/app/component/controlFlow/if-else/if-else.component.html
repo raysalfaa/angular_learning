@@ -1,0 +1,76 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h1>Control Flow </h1>
+    <p>&#64;If &#64;IfElse</p>
+</div>
+<div class="row pt-3">
+    <div class="col-3">
+        @if (isText1Visible){
+            <div class="bg-danger p-3 text-center">
+                <h4>Text 1</h4>
+            </div>
+        }
+    </div>  
+    <div class="col-3">
+        @if(isText2WarningVisible){
+            <div class="bg-warning p-3 text-center">
+                <h4>Text 2</h4>
+            </div>
+        }
+        @else(){
+            <div class="bg-success p-3 text-center">
+                <h4>Text 2</h4>
+            </div>
+        }
+        
+    </div>
+    <div class="col-3">
+        @if(num1===num2){
+            <div class="bg-secondary p-3 text-center">
+                <h4>Text 3</h4>
+            </div>
+        }
+        
+    </div>
+    <div class="col-3">
+        <div class="bg-primary p-3 text-center">
+            @if(country==='India'){
+                <h4>India</h4>
+            }
+            @else if(country==='USA'){
+                <h4>USA</h4>
+            }
+            @else if(country==='Nepal'){
+                <h4>Nepal</h4>
+            }
+            @else{
+                <h4>Select the Country</h4>
+            }
+        </div>
+    </div>
+</div>
+<div class="row pt-3">
+    <div class="col-3 text-center">
+        <button class="btn btn-danger" (click)="hideText1()">Hide</button>
+        <button class="btn btn-primary mx-2" (click)="showText1()">Show</button>
+    </div>
+    <div class="col-3 text-center">
+        <button class="btn btn-secondary" (click)="toggle()">Toggle</button>
+    </div>
+    <div class="col-3">
+        <div style=" align-items: center">
+            <input type="text" placeholder="num1" [(ngModel)]="num1" class="width-30 ">
+            <input type="text" placeholder="num2" [(ngModel)]="num2" class="width-30 ">
+        </div>
+    </div>
+    <div class="col-3 center-align">
+        <div style="display: flex; align-items: center;">
+            <select [(ngModel)]="country">
+                <option value="">Select</option>
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+        </div>
+    </div>
+
+</div>

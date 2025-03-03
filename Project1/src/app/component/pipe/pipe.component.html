@@ -1,0 +1,61 @@
+<div class="mt-2 p-2 bg-secondary text-white rounded">
+    <h4>Pipe in Angular </h4>
+    <h2>Default pipe and custom pipe</h2>
+</div>
+<div class="row">
+    <div class="col-3">
+        original value- {{name}}
+        <br>
+        After pipe- {{name | uppercase}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{name}}
+        <br>
+        After pipe- {{name | lowercase}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{intro}}
+        <br>
+        After pipe- {{intro | titlecase}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{date}}
+        <br>
+        After pipe- {{date| date }}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{date}}
+        <br>
+        After pipe- {{date| date :"dd-MM-yy"}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{date}}
+        <br>
+        After pipe- {{date| date :"dd/MMM/yyyy"}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{student}}
+        <br>
+        After pipe- {{student| json}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{crtTime}}
+        <br>
+        After pipe- {{crtTime| async | date:"hh:mm:ss"}}
+    </div>
+    <br>
+    <div class="col-3">
+        original value- {{student.dob}}
+        <br>
+        After pipe- {{student.dob|na}}
+    </div>
+    <br>
+    
+</div>

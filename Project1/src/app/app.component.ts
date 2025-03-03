@@ -1,14 +1,8 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { AddEmployeeComponent } from './component/add-employee/add-employee.component';
-import { NewEmployeeComponent } from './component/new-employee/new-employee.component';
-import { DataBindingComponent } from './component/data-binding/data-binding.component';
-import { StructuralComponent } from './component/directive/structural/structural.component';
-import { AttributeComponent } from './component/directive/attribute/attribute.component';
-
+import { RouterLink, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,AttributeComponent],
+  imports: [RouterOutlet,RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
